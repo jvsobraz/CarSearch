@@ -47,7 +47,7 @@ Uma API para o app de vendas e compras de veículos.
 | código | descrição
 |-|-
 | 201 | veículo cadastrado com sucesso
-| 404 | os campo enviados são inválidos
+| 404 | os campos enviados são inválidos
 
 ---
 
@@ -79,4 +79,4 @@ Uma API para o app de vendas e compras de veículos.
 | código | descrição
 |-|-
 | 200 | veículo cadastrado com sucesso
-| 404 | os campo enviados são inválidos
+| 404 | os campos enviados são inválidos

@@ -4,42 +4,41 @@ Uma API para o app de vendas e compras de veículos.
 
 ## Endpoints
 
-- Despesas
+- Veículos
     - Cadastrar
     - Mostrar detalhes
     - Apagar
     - Atualizar
-    - Listar todas
+    - Listar todos
 - Contas
 - Categorias
 
 ---
 
-...
-### Cadastrar Despesa
+### Cadastrar Veículo
 
-'POST' /api/despesa
+'POST' /api/veiculo
 
 **Campos da requisição**
 
 | campo | tipo | obrigatório | descrição
 |-------|------|:-------------:|--------
-| valor | decimal | sim      | o valor da despesa deve ser maior que zero
-| data  | data | sim         | a data da despesa
+| valor | decimal | sim      | o valor do veículo deve ser maior que R$1.000
+| data  | data | sim         | a data do veículo
 | categoria_id | int | sim | código de uma categoria previamente cadastrada
 | conta_id | int | int | o código de uma conta previamente cadastrada
-| descrição | texto | não | um texto sobre a despesa com no máximo de 255 caracteres
+| descrição | texto | não | um texto sobre o veículo com no máximo de 255 caracteres
 
 **Exemplo de corpo de requisição**
 
 '''js
 
 {
-    valor: 100.00,
+    valor: 70.000,
     data: '2023-02-28',
     categoria_id: 1,
     conta_id: 1,
-    descricao: 'cinema'
+    descricao: 'Carro'
 }
 '''
 
@@ -47,31 +46,31 @@ Uma API para o app de vendas e compras de veículos.
 
 | código | descrição
 |-|-
-| 200 | despesa cadastrada com sucesso
+| 200 | veículo cadastrado com sucesso
 | 404 | os campo enviados são inválidos
 
 ---
 
 ...
-### Detalhar Despesa
+### Detalhar Veículo
 
-'GET' /api/despesa/{id}
+'GET' /api/veiculo/{id}
 
 **Exemplo de Corpo da Resposta**
 
 '''js
 {
-    valor: 100.00,
+    valor: 70.000,
     data: '2023-02-28',
     categoria: {
         categoria_id: 1,
-        nome: 'lazer',
+        nome: 'SUV',
     },
     conta: {
         conta_id: 1,
-        nome: 'itaú',
+        nome: 'João',
     },
-    descricao: 'cinema'
+    descricao: 'Carro'
 }
 '''
 
@@ -79,5 +78,5 @@ Uma API para o app de vendas e compras de veículos.
 
 | código | descrição
 |-|-
-| 200 | despesa cadastrada com sucesso
+| 200 | veículo cadastrado com sucesso
 | 404 | os campo enviados são inválidos

@@ -46,7 +46,7 @@ Uma API para o app de vendas e compras de veículos.
 
 | código | descrição
 |-|-
-| 200 | veículo cadastrado com sucesso
+| 201 | veículo cadastrado com sucesso
 | 404 | os campo enviados são inválidos
 
 ---

@@ -1,5 +1,3 @@
-package br.com.fiap.digitalbusinessenablement.models;
+package br.com.fiap.dindin.models;
 
-public class RestValidationError {
-    
-}
+public record RestValidationError(String field, String message) {}

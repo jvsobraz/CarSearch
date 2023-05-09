@@ -19,7 +19,7 @@ public class RestExceptionHandler {
     
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<List<RestValidationError>> handler(MethodArgumentNotValidException e){
-        log.error("erro de validacao");
+        log.error("Erro de validação");
         List<RestValidationError> errors = new ArrayList<>();
         e.getFieldErrors().forEach(v -> errors.add(new RestValidationError(v.getField(), v.getDefaultMessage())));
         return ResponseEntity.badRequest().body(errors);

@@ -1,4 +1,4 @@
-package br.com.fiap.dindin.models;
+package br.com.fiap.digitalbusinessenablement.models;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

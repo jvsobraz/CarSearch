@@ -1,10 +1,10 @@
-package br.com.fiap.dindin.repository;
+package br.com.fiap.digitalbusinessenablement.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.fiap.dindin.models.Usuario;
+import br.com.fiap.digitalbusinessenablement.models.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 

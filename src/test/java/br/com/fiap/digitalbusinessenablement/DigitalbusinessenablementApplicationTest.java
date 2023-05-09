@@ -1,10 +1,10 @@
-package br.com.fiap.dindin;
+package br.com.fiap.digitalbusinessenablement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DindinApplicationTests {
+class DigitalBusinessEnablementApplicationTests {
 
 	@Test
 	void contextLoads() {

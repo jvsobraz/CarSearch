@@ -1,10 +1,10 @@
-package br.com.fiap.dindin.repository;
+package br.com.fiap.digitalbusinessenablement.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.fiap.dindin.models.Despesa;
+import br.com.fiap.digitalbusinessenablement.models.Despesa;
 
 public interface DespesaRepository extends JpaRepository<Despesa, Long> {
 

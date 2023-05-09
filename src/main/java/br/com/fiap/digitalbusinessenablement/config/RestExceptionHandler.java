@@ -1,4 +1,4 @@
-package br.com.fiap.dindin.config;
+package br.com.fiap.digitalbusinessenablement.config;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import br.com.fiap.dindin.models.RestValidationError;
+import br.com.fiap.digitalbusinessenablement.models.RestValidationError;
 
 @RestControllerAdvice
 public class RestExceptionHandler {

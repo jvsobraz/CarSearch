@@ -1,4 +1,4 @@
-package br.com.fiap.dindin.exceptions;
+package br.com.fiap.digitalbusinessenablement.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

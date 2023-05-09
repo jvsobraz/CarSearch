@@ -1,4 +1,4 @@
-package br.com.fiap.dindin.models;
+package br.com.fiap.digitalbusinessenablement.models;
 
 import java.util.Collection;
 import java.util.List;

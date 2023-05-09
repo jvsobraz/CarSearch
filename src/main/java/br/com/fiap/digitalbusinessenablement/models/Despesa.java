@@ -1,4 +1,4 @@
-package br.com.fiap.dindin.models;
+package br.com.fiap.digitalbusinessenablement.models;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -6,8 +6,8 @@ import java.time.LocalDate;
 import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.EntityModel;
 
-import br.com.fiap.dindin.controllers.ContaController;
-import br.com.fiap.dindin.controllers.DespesaController;
+import br.com.fiap.digitalbusinessenablement.controllers.ContaController;
+import br.com.fiap.digitalbusinessenablement.controllers.DespesaController;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

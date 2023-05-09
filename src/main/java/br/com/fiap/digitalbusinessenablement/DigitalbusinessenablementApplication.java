@@ -1,13 +1,13 @@
-package br.com.fiap.dindin;
+package br.com.fiap.digitalbusinessenablement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DindinApplication {
+public class DigitalBusinessEnablementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DindinApplication.class, args);
+		SpringApplication.run(DigitalBusinessEnablementApplication.class, args);
 	}
 
 }

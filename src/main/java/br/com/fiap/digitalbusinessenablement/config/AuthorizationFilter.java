@@ -1,4 +1,4 @@
-package br.com.fiap.dindin.config;
+package br.com.fiap.digitalbusinessenablement.config;
 
 import java.io.IOException;
 

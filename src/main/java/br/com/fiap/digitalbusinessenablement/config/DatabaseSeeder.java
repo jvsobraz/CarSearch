@@ -1,4 +1,4 @@
-package br.com.fiap.dindin.config;
+package br.com.fiap.digitalbusinessenablement.config;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import br.com.fiap.dindin.models.Conta;
-import br.com.fiap.dindin.models.Despesa;
-import br.com.fiap.dindin.models.Usuario;
-import br.com.fiap.dindin.repository.ContaRepository;
-import br.com.fiap.dindin.repository.DespesaRepository;
-import br.com.fiap.dindin.repository.UsuarioRepository;
+import br.com.fiap.digitalbusinessenablement.models.Conta;
+import br.com.fiap.digitalbusinessenablement.models.Despesa;
+import br.com.fiap.digitalbusinessenablement.models.Usuario;
+import br.com.fiap.digitalbusinessenablement.repository.ContaRepository;
+import br.com.fiap.digitalbusinessenablement.repository.DespesaRepository;
+import br.com.fiap.digitalbusinessenablement.repository.UsuarioRepository;
 
 @Configuration
 public class DatabaseSeeder implements CommandLineRunner {
@@ -48,7 +48,7 @@ public class DatabaseSeeder implements CommandLineRunner {
         ));
 
         usuarioRepository.save(Usuario.builder()
-            .nome("Joao Carlos")
+            .nome("João Vitor")
             .email("joao@fiap.com.br")
             .senha("$2a$12$pMH3uGhwRXAaEq21jmmqn.PzxykI/HJyVAXM6sIQlcQ/2emqevaWC")
             .build()

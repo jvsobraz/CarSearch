@@ -34,7 +34,7 @@ public class Despesa{
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Min(value = 0, message = "deve ser positivo") 
+    @Min(value = 0, message = "Deve ser positivo") 
     @NotNull
     private BigDecimal valor;
    

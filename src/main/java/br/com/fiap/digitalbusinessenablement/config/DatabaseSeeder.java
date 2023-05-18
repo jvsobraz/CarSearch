@@ -49,7 +49,7 @@ public class DatabaseSeeder implements CommandLineRunner {
 
         usuarioRepository.save(Usuario.builder()
             .nome("João Vitor")
-            .email("joao@fiap.com.br")
+            .email("jvsobraz@hotmail.com")
             .senha("$2a$12$pMH3uGhwRXAaEq21jmmqn.PzxykI/HJyVAXM6sIQlcQ/2emqevaWC")
             .build()
         );

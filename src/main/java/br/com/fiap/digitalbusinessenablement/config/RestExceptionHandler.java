@@ -1,4 +1,4 @@
-package br.com.fiap.dindin.config;
+package br.com.fiap.digitalbusinessenablement.config;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import br.com.fiap.dindin.models.RestValidationError;
+import br.com.fiap.digitalbusinessenablement.models.RestValidationError;
 
 @RestControllerAdvice
 public class RestExceptionHandler {
@@ -22,7 +22,7 @@ public class RestExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<List<RestValidationError>> handler(MethodArgumentNotValidException e){
-        log.error("erro de validacao");
+        log.error("erro de validação");
         List<RestValidationError> errors = new ArrayList<>();
         e.getFieldErrors().forEach(v -> errors.add(new RestValidationError(v.getField(), v.getDefaultMessage())));
         return ResponseEntity.badRequest().body(errors);

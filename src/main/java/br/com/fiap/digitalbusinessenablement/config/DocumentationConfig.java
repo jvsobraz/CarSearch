@@ -1,4 +1,4 @@
-package br.com.fiap.dindin.config;
+package br.com.fiap.digitalbusinessenablement.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,10 +16,10 @@ public class DocumentationConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                    .title("DinDin Sem Fim API")
+                    .title("Digital Business Enablement API")
                     .version("V1")
-                    .description("Uma API para o app de controle de gastos pessoais.")
-                    .contact(new Contact().name("Joao Carlos").email("joao@fiap.com.br"))
+                    .description("Uma API para o app de vendas e compras de carros.")
+                    .contact(new Contact().name("João Vitor").email("jvsobraz@hotmail.com"))
                 )
                 .components(new Components()
                         .addSecuritySchemes("bearer-key",

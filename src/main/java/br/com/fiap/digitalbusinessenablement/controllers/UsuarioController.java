@@ -16,7 +16,7 @@ import br.com.fiap.digitalbusinessenablement.service.TokenJwtService;
 import jakarta.validation.Valid;
 
 @RestController
-public class UsuarioControlle {
+public class UsuarioController {
 
     @Autowired
     UsuarioRepository repository;

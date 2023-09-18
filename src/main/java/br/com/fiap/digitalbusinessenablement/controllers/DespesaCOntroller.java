@@ -1,4 +1,4 @@
-package br.com.fiap.dindin.controllers;
+package br.com.fiap.digitalbusinessenablement.controllers;
 
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +20,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.fiap.dindin.exceptions.RestNotFoundException;
-import br.com.fiap.dindin.models.Despesa;
-import br.com.fiap.dindin.repository.ContaRepository;
-import br.com.fiap.dindin.repository.DespesaRepository;
+import br.com.fiap.digitalbusinessenablement.exceptions.RestNotFoundException;
+import br.com.fiap.digitalbusinessenablement.models.Despesa;
+import br.com.fiap.digitalbusinessenablement.repository.ContaRepository;
+import br.com.fiap.digitalbusinessenablement.repository.DespesaRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

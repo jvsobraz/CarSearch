@@ -7,15 +7,17 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
-import br.com.fiap.digitalbusinessenablement.models.Conta;
-import br.com.fiap.digitalbusinessenablement.models.Despesa;
-import br.com.fiap.digitalbusinessenablement.models.Usuario;
-import br.com.fiap.digitalbusinessenablement.repository.ContaRepository;
-import br.com.fiap.digitalbusinessenablement.repository.DespesaRepository;
-import br.com.fiap.digitalbusinessenablement.repository.UsuarioRepository;
+import br.com.fiap.dindin.models.Conta;
+import br.com.fiap.dindin.models.Despesa;
+import br.com.fiap.dindin.models.Usuario;
+import br.com.fiap.dindin.repository.ContaRepository;
+import br.com.fiap.dindin.repository.DespesaRepository;
+import br.com.fiap.dindin.repository.UsuarioRepository;
 
 @Configuration
+@Profile("dev")
 public class DatabaseSeeder implements CommandLineRunner {
 
     @Autowired
@@ -48,8 +50,8 @@ public class DatabaseSeeder implements CommandLineRunner {
         ));
 
         usuarioRepository.save(Usuario.builder()
-            .nome("João Vitor")
-            .email("jvsobraz@hotmail.com")
+            .nome("Joao Carlos")
+            .email("joao@fiap.com.br")
             .senha("$2a$12$pMH3uGhwRXAaEq21jmmqn.PzxykI/HJyVAXM6sIQlcQ/2emqevaWC")
             .build()
         );

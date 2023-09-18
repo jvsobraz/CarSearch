@@ -20,12 +20,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.fiap.digitalbusinessenablement.exceptions.RestNotFoundException;
-import br.com.fiap.digitalbusinessenablement.models.Conta;
-import br.com.fiap.digitalbusinessenablement.models.Despesa;
-import br.com.fiap.digitalbusinessenablement.models.RestValidationError;
-import br.com.fiap.digitalbusinessenablement.repository.ContaRepository;
-import br.com.fiap.digitalbusinessenablement.repository.DespesaRepository;
+import br.com.fiap.dindin.exceptions.RestNotFoundException;
+import br.com.fiap.dindin.models.Conta;
+import br.com.fiap.dindin.models.Despesa;
+import br.com.fiap.dindin.models.RestValidationError;
+import br.com.fiap.dindin.repository.ContaRepository;
+import br.com.fiap.dindin.repository.DespesaRepository;
 import jakarta.validation.Valid;
 
 @RestController
@@ -58,9 +58,8 @@ public class ContaController {
     @DeleteMapping("{id}")
     public ResponseEntity<Conta> destroy(@PathVariable Long id){
         log.info("apagando conta " + id);
-        var conta = getConta(id);
-        conta.setAtiva(false);
-        repository.save(conta);
+        getConta(id);
+        repository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 

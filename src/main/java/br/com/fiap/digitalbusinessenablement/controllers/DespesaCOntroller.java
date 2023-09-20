@@ -37,7 +37,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @SecurityRequirement(name = "bearer-key")
 @Tag(name = "despesa")
-public class DespesaController {
+public class DespesaCOntroller {
 
     @Autowired
     DespesaRepository despesaRepository;

@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.EntityModel;
 
 import br.com.fiap.digitalbusinessenablement.controllers.ContaController;
-import br.com.fiap.digitalbusinessenablement.controllers.DespesaController;
+import br.com.fiap.digitalbusinessenablement.controllers.DespesaCOntroller;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -50,9 +50,9 @@ public class Despesa{
     public EntityModel<Despesa> toEntityModel(){
         return EntityModel.of(
             this,
-            linkTo(methodOn(DespesaController.class).show(id)).withSelfRel(),
-            linkTo(methodOn(DespesaController.class).destroy(id)).withRel("delete"),
-            linkTo(methodOn(DespesaController.class).index(null, Pageable.unpaged())).withRel("all"),
+            linkTo(methodOn(DespesaCOntroller.class).show(id)).withSelfRel(),
+            linkTo(methodOn(DespesaCOntroller.class).destroy(id)).withRel("delete"),
+            linkTo(methodOn(DespesaCOntroller.class).index(null, Pageable.unpaged())).withRel("all"),
             linkTo(methodOn(ContaController.class).show(this.getConta().getId())).withRel("conta")
         );
     }

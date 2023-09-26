@@ -29,7 +29,7 @@ public class TokenJwtService {
         var token = JWT.create()
                     .withExpiresAt(Instant.now().plus(2, ChronoUnit.HOURS))
                     .withSubject(credencial.email())
-                    .withIssuer("CarSearch")
+                    .withIssuer("DinDin")
                     .sign(alg)
                     ;
 
@@ -39,7 +39,7 @@ public class TokenJwtService {
     public Usuario validate(String token) {
         Algorithm alg = Algorithm.HMAC256(secret);
         var email = JWT.require(alg)
-                    .withIssuer("CarSearch")
+                    .withIssuer("DinDin")
                     .build()
                     .verify(token)
                     .getSubject();

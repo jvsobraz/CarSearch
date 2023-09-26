@@ -1,5 +1,8 @@
 package br.com.fiap.carsearch.controllers;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -7,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +22,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.fiap.carsearch.exceptions.RestNotFoundException;
 import br.com.fiap.carsearch.models.Conta;
+import br.com.fiap.carsearch.models.Despesa;
+import br.com.fiap.carsearch.models.RestValidationError;
 import br.com.fiap.carsearch.repository.ContaRepository;
+import br.com.fiap.carsearch.repository.DespesaRepository;
 import jakarta.validation.Valid;
 
 @RestController
@@ -37,20 +44,20 @@ public class ContaController {
 
     @PostMapping
     public ResponseEntity<Conta> create(@RequestBody @Valid Conta conta){
-        log.info("Cadastrando conta " + conta);
+        log.info("cadastrando conta " + conta);
         repository.save(conta);
         return ResponseEntity.status(HttpStatus.CREATED).body(conta);
     }
     
     @GetMapping("{id}")
     public ResponseEntity<Conta> show(@PathVariable Long id){
-        log.info("Detalhando conta " + id);
+        log.info("detalhando conta " + id);
         return ResponseEntity.ok(getConta(id));
     }
     
     @DeleteMapping("{id}")
     public ResponseEntity<Conta> destroy(@PathVariable Long id){
-        log.info("Apagando conta " + id);
+        log.info("apagando conta " + id);
         getConta(id);
         repository.deleteById(id);
         return ResponseEntity.noContent().build();
@@ -58,7 +65,7 @@ public class ContaController {
 
     @PutMapping("{id}")
     public ResponseEntity<Conta> update(@PathVariable Long id, @RequestBody @Valid Conta conta){
-        log.info("Atualizando conta " + id);
+        log.info("atualizando conta " + id);
         getConta(id);
         conta.setId(id);
         repository.save(conta);
@@ -67,7 +74,7 @@ public class ContaController {
 
     private Conta getConta(Long id) {
         return repository.findById(id)
-            .orElseThrow(() -> new RestNotFoundException("Conta não encontrada"));
+            .orElseThrow(() -> new RestNotFoundException("conta não encontrada"));
     }
     
 }

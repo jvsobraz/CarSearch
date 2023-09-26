@@ -11,7 +11,7 @@
 	<groupId>br.com.fiap</groupId>
 	<artifactId>carsearch</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dindin</name>
+	<name>carsearch</name>
 	<description>API do app CarSearch</description>
 	<properties>
 		<java.version>17</java.version>

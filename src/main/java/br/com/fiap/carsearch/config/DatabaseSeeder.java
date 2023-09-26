@@ -32,8 +32,8 @@ public class DatabaseSeeder implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Conta c1 = new Conta(1L, "Itaú", new BigDecimal(100), "money", true);
-        Conta c2 = new Conta(2L, "Banco do Brasil", new BigDecimal(56), "money", true);
-        Conta c3 = new Conta(3L, "Wallet", new BigDecimal(3), "coin", true);
+        Conta c2 = new Conta(2L, "banco do Brasil", new BigDecimal(56), "money", true);
+        Conta c3 = new Conta(3L, "Carteira", new BigDecimal(3), "coin", true);
         contaRepository.saveAll(List.of(c1,c2,c3));
 
         despesaRepository.saveAll(List.of(

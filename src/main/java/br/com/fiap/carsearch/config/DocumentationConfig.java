@@ -18,7 +18,7 @@ public class DocumentationConfig {
                 .info(new Info()
                     .title("CarSearch API")
                     .version("V1")
-                    .description("Uma API para o app de vendas e compras de carros.")
+                    .description("Uma API para o app de vendas e compras de veículos.")
                     .contact(new Contact().name("João Vitor").email("jvsobraz@hotmail.com"))
                 )
                 .components(new Components()

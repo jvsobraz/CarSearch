@@ -1,4 +1,4 @@
-package br.com.fiap.digitalbusinessenablement.controllers;
+package br.com.fiap.carsearch.controllers;
 
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +20,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.fiap.digitalbusinessenablement.exceptions.RestNotFoundException;
-import br.com.fiap.digitalbusinessenablement.models.Despesa;
-import br.com.fiap.digitalbusinessenablement.repository.ContaRepository;
-import br.com.fiap.digitalbusinessenablement.repository.DespesaRepository;
+import br.com.fiap.carsearch.exceptions.RestNotFoundException;
+import br.com.fiap.carsearch.models.Despesa;
+import br.com.fiap.carsearch.repository.ContaRepository;
+import br.com.fiap.carsearch.repository.DespesaRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -37,7 +37,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @SecurityRequirement(name = "bearer-key")
 @Tag(name = "despesa")
-public class DespesaCOntroller {
+public class DespesaController {
 
     @Autowired
     DespesaRepository despesaRepository;

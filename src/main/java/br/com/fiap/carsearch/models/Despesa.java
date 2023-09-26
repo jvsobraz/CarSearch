@@ -1,4 +1,4 @@
-package br.com.fiap.digitalbusinessenablement.models;
+package br.com.fiap.carsearch.models;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -6,8 +6,8 @@ import java.time.LocalDate;
 import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.EntityModel;
 
-import br.com.fiap.digitalbusinessenablement.controllers.ContaController;
-import br.com.fiap.digitalbusinessenablement.controllers.DespesaCOntroller;
+import br.com.fiap.carsearch.controllers.ContaController;
+import br.com.fiap.carsearch.controllers.DespesaController;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -50,9 +50,9 @@ public class Despesa{
     public EntityModel<Despesa> toEntityModel(){
         return EntityModel.of(
             this,
-            linkTo(methodOn(DespesaCOntroller.class).show(id)).withSelfRel(),
-            linkTo(methodOn(DespesaCOntroller.class).destroy(id)).withRel("delete"),
-            linkTo(methodOn(DespesaCOntroller.class).index(null, Pageable.unpaged())).withRel("all"),
+            linkTo(methodOn(DespesaController.class).show(id)).withSelfRel(),
+            linkTo(methodOn(DespesaController.class).destroy(id)).withRel("delete"),
+            linkTo(methodOn(DespesaController.class).index(null, Pageable.unpaged())).withRel("all"),
             linkTo(methodOn(ContaController.class).show(this.getConta().getId())).withRel("conta")
         );
     }

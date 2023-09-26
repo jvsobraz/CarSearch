@@ -1,4 +1,4 @@
-package br.com.fiap.digitalbusinessenablement.models;
+package br.com.fiap.carsearch.models;
 
 import java.util.Collection;
 import java.util.List;

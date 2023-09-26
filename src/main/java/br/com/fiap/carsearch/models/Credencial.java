@@ -1,4 +1,4 @@
-package br.com.fiap.digitalbusinessenablement.models;
+package br.com.fiap.carsearch.models;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

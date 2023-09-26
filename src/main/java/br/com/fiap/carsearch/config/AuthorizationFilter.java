@@ -1,4 +1,4 @@
-package br.com.fiap.digitalbusinessenablement.config;
+package br.com.fiap.carsearch.config;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import br.com.fiap.digitalbusinessenablement.service.TokenJwtService;
+import br.com.fiap.carsearch.service.TokenJwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

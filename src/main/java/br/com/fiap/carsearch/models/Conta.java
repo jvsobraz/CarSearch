@@ -1,10 +1,8 @@
-package br.com.fiap.digitalbusinessenablement.models;
+package br.com.fiap.carsearch.models;
 
 import java.math.BigDecimal;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

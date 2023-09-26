@@ -1,4 +1,4 @@
-package br.com.fiap.digitalbusinessenablement.config;
+package br.com.fiap.carsearch.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +16,7 @@ public class DocumentationConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                    .title("Digital Business Enablement API")
+                    .title("CarSearch API")
                     .version("V1")
                     .description("Uma API para o app de vendas e compras de carros.")
                     .contact(new Contact().name("João Vitor").email("jvsobraz@hotmail.com"))

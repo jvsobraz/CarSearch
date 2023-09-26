@@ -1,4 +1,4 @@
-package br.com.fiap.digitalbusinessenablement.config;
+package br.com.fiap.carsearch.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

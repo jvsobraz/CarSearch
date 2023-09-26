@@ -1,4 +1,4 @@
-package br.com.fiap.digitalbusinessenablement.service;
+package br.com.fiap.carsearch.service;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 
-import br.com.fiap.digitalbusinessenablement.models.Credencial;
-import br.com.fiap.digitalbusinessenablement.models.JwtToken;
-import br.com.fiap.digitalbusinessenablement.models.Usuario;
-import br.com.fiap.digitalbusinessenablement.repository.UsuarioRepository;
+import br.com.fiap.carsearch.models.Credencial;
+import br.com.fiap.carsearch.models.JwtToken;
+import br.com.fiap.carsearch.models.Usuario;
+import br.com.fiap.carsearch.repository.UsuarioRepository;
 
 @Service
 public class TokenJwtService {
@@ -29,7 +29,7 @@ public class TokenJwtService {
         var token = JWT.create()
                     .withExpiresAt(Instant.now().plus(2, ChronoUnit.HOURS))
                     .withSubject(credencial.email())
-                    .withIssuer("DigitalBusinessEnablement")
+                    .withIssuer("CarSearch")
                     .sign(alg)
                     ;
 
@@ -39,7 +39,7 @@ public class TokenJwtService {
     public Usuario validate(String token) {
         Algorithm alg = Algorithm.HMAC256(secret);
         var email = JWT.require(alg)
-                    .withIssuer("DigitalBusinessEnablement")
+                    .withIssuer("CarSearch")
                     .build()
                     .verify(token)
                     .getSubject();

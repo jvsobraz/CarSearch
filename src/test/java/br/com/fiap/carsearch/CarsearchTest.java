@@ -1,10 +1,10 @@
-package br.com.fiap.digitalbusinessenablement;
+package br.com.fiap.carsearch;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DigitalBusinessEnablementApplicationTests {
+class CarSearchTests {
 
 	@Test
 	void contextLoads() {

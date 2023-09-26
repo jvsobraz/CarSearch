@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.fiap</groupId>
-	<artifactId>digitalbusinessenablement</artifactId>
+	<artifactId>carsearch</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dindin</name>
 	<description>API do app CarSearch</description>

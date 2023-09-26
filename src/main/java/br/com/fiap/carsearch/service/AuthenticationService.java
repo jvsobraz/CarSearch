@@ -1,4 +1,4 @@
-package br.com.fiap.digitalbusinessenablement.service;
+package br.com.fiap.carsearch.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import br.com.fiap.digitalbusinessenablement.repository.UsuarioRepository;
+import br.com.fiap.carsearch.repository.UsuarioRepository;
 
 @Service
 public class AuthenticationService implements UserDetailsService {

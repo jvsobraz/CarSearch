@@ -1,13 +1,13 @@
-package br.com.fiap.digitalbusinessenablement;
+package br.com.fiap.carsearch;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DigitalbusinessenablementApplication {
+public class CarSearch {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DigitalbusinessenablementApplication.class, args);
+		SpringApplication.run(CarSearch.class, args);
 	}
 
 }

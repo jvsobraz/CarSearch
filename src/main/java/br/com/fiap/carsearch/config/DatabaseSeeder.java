@@ -1,4 +1,4 @@
-package br.com.fiap.digitalbusinessenablement.config;
+package br.com.fiap.carsearch.config;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -9,12 +9,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import br.com.fiap.digitalbusinessenablement.models.Conta;
-import br.com.fiap.digitalbusinessenablement.models.Despesa;
-import br.com.fiap.digitalbusinessenablement.models.Usuario;
-import br.com.fiap.digitalbusinessenablement.repository.ContaRepository;
-import br.com.fiap.digitalbusinessenablement.repository.DespesaRepository;
-import br.com.fiap.digitalbusinessenablement.repository.UsuarioRepository;
+import br.com.fiap.carsearch.models.Conta;
+import br.com.fiap.carsearch.models.Despesa;
+import br.com.fiap.carsearch.models.Usuario;
+import br.com.fiap.carsearch.repository.ContaRepository;
+import br.com.fiap.carsearch.repository.DespesaRepository;
+import br.com.fiap.carsearch.repository.UsuarioRepository;
 
 @Configuration
 @Profile("dev")
@@ -31,21 +31,15 @@ public class DatabaseSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Conta c1 = new Conta(1L, "itau", new BigDecimal(100), "money", true);
-        Conta c2 = new Conta(2L, "bradesco", new BigDecimal(56), "money", true);
-        Conta c3 = new Conta(3L, "carteira", new BigDecimal(3), "coin", true);
+        Conta c1 = new Conta(1L, "Itaú", new BigDecimal(100), "money", true);
+        Conta c2 = new Conta(2L, "Banco do Brasil", new BigDecimal(56), "money", true);
+        Conta c3 = new Conta(3L, "Wallet", new BigDecimal(3), "coin", true);
         contaRepository.saveAll(List.of(c1,c2,c3));
 
         despesaRepository.saveAll(List.of(
-            Despesa.builder().valor(new BigDecimal(34)).descricao("cinema").data(LocalDate.now()).conta(c1).build(),
             Despesa.builder().valor(new BigDecimal(54)).descricao("aluguel").data(LocalDate.now()).conta(c1).build(),
-            Despesa.builder().valor(new BigDecimal(76)).descricao("netflix").data(LocalDate.now()).conta(c1).build(),
             Despesa.builder().valor(new BigDecimal(12)).descricao("estacionamento").data(LocalDate.now()).conta(c1).build(),
             Despesa.builder().valor(new BigDecimal(54)).descricao("imposto").data(LocalDate.now()).conta(c1).build(),
-            Despesa.builder().valor(new BigDecimal(55)).descricao("ifood").data(LocalDate.now()).conta(c1).build(),
-            Despesa.builder().valor(new BigDecimal(100)).descricao("restaurante").data(LocalDate.now()).conta(c1).build(),
-            Despesa.builder().valor(new BigDecimal(78)).descricao("cinema").data(LocalDate.now()).conta(c1).build(),
-            Despesa.builder().valor(new BigDecimal(87)).descricao("internet").data(LocalDate.now()).conta(c1).build(),
             Despesa.builder().valor(new BigDecimal(78)).descricao("tarifa").data(LocalDate.now()).conta(c1).build()
         ));
 
